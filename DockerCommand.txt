@@ -1,0 +1,22 @@
+mvn clean
+mvn package
+
+docker build -t myapp11 .
+
+docker images
+docker run -d -p 9009:8081 myapp11
+
+docker build -t myproj .
+
+docker run -d -p 8090:8080 myproj
+-------------------------------------------------------------------------------------------
+git clone https://github.com/cserajib/carservice
+
+
+mvn clean
+mvn package
+
+docker build -t discovery1 .
+docker run -d -p 9008:1111 discovery1
+
+---------------------------------------------------------------------------------------------
