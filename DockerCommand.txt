@@ -12,11 +12,18 @@ docker run -d -p 8090:8080 myproj
 -------------------------------------------------------------------------------------------
 git clone https://github.com/cserajib/carservice
 
+if image discovery1 exists delete it first using below command :otherwise wil not work properly
+
+if running - docker stop discovery1 
+docker rm discovery1 
 
 mvn clean
 mvn package
 
 docker build -t discovery1 .
 docker run -d -p 9008:1111 discovery1
+
+here 1111 is port no that is same as tomcat port mentioned in application.properties and it has no connection 
+with expose port in dockerfile
 
 ---------------------------------------------------------------------------------------------

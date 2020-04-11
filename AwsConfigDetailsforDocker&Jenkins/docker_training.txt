@@ -1,0 +1,624 @@
+login as: ubuntu
+Authenticating with public key "imported-openssh-key"
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1044-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Sep 19 08:39:04 UTC 2019
+
+  System load:  0.17              Processes:           88
+  Usage of /:   13.6% of 7.69GB   Users logged in:     0
+  Memory usage: 14%               IP address for eth0: 172.31.40.86
+  Swap usage:   0%
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-40-86:~$ ls -ltr
+total 0
+ubuntu@ip-172-31-40-86:~$ cd /home
+ubuntu@ip-172-31-40-86:/home$ ls ltr
+ls: cannot access 'ltr': No such file or directory
+ubuntu@ip-172-31-40-86:/home$ ls
+ubuntu
+ubuntu@ip-172-31-40-86:/home$ cd /ubuntu
+-bash: cd: /ubuntu: No such file or directory
+ubuntu@ip-172-31-40-86:/home$ cd /home/ubuntu/
+ubuntu@ip-172-31-40-86:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-40-86:~$ /
+-bash: /: Is a directory
+ubuntu@ip-172-31-40-86:~$
+ubuntu@ip-172-31-40-86:~$ cd /
+ubuntu@ip-172-31-40-86:/$ cd -
+/home/ubuntu
+ubuntu@ip-172-31-40-86:~$ cd /root
+-bash: cd: /root: Permission denied
+ubuntu@ip-172-31-40-86:~$ docker run -d nginx
+
+Command 'docker' not found, but can be installed with:
+
+sudo snap install docker     # version 18.06.1-ce, or
+sudo apt  install docker.io
+
+See 'snap info docker' for additional versions.
+
+ubuntu@ip-172-31-40-86:~$ ^C
+ubuntu@ip-172-31-40-86:~$ sudo apt  install docker.io
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package docker.io
+E: Couldn't find any package by glob 'docker.io'
+E: Couldn't find any package by regex 'docker.io'
+ubuntu@ip-172-31-40-86:~$ ^C
+ubuntu@ip-172-31-40-86:~$ sudo snap install docker
+docker 18.06.1-ce from Canonical? installed
+ubuntu@ip-172-31-40-86:~$ docker run -d nginx
+docker: Got permission denied while trying to connect to the Docker daemon socke                                                                                        t at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/c                                                                                        ontainers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-40-86:~$ docker --v
+unknown flag: --v
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/home/ubuntu/snap/docker/384/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/home/ubuntu/snap/docker/384/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/home/ubuntu/snap/docker/384/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/home/ubuntu/snap/docker/384/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a runnin                                                                                        g container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesyste                                                                                        m
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by de                                                                                        fault)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit cod                                                                                        es
+
+Run 'docker COMMAND --help' for more information on a command.
+
+ubuntu@ip-172-31-40-86:~$ docker -v
+Docker version 18.06.1-ce, build e68fc7a
+ubuntu@ip-172-31-40-86:~$ cd /home/ubuntu
+ubuntu@ip-172-31-40-86:~$ ~
+-bash: /home/ubuntu: Is a directory
+ubuntu@ip-172-31-40-86:~$ mkdir xyz
+ubuntu@ip-172-31-40-86:~$ cd /xyz
+-bash: cd: /xyz: No such file or directory
+ubuntu@ip-172-31-40-86:~$ ls
+snap  xyz
+ubuntu@ip-172-31-40-86:~$ cd xyz/
+ubuntu@ip-172-31-40-86:~/xyz$ cd ..
+ubuntu@ip-172-31-40-86:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-40-86:~$ sudo su
+root@ip-172-31-40-86:/home/ubuntu# apt-get update
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [739 kB]
+Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [266 kB]
+Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [14.5 kB]
+Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [4736 B]
+Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1006 kB]
+Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [309 kB]
+Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [7528 B]
+Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [3868 B]
+Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [2512 B]
+Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [1644 B]
+Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4020 B]
+Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [1856 B]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [516 kB]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [173 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [7648 B]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [3064 B]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [607 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [202 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [4904 B]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2396 B]
+Fetched 17.9 MB in 4s (4761 kB/s)
+Reading package lists... Done
+root@ip-172-31-40-86:/home/ubuntu# apt-get install docker.io
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils cgroupfs-mount containerd pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils cgroupfs-mount containerd docker.io pigz runc ubuntu-fan
+0 upgraded, 7 newly installed, 0 to remove and 63 not upgraded.
+Need to get 52.2 MB of archives.
+After this operation, 257 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1.5-15ubuntu1 [30.1 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd64 1.0.0~rc7+git20190403.029124da-0ubuntu1~18.04.2 [1903 kB]
+Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containerd amd64 1.2.6-0ubuntu1~18.04.2 [19.4 MB]
+Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.io amd64 18.09.7-0ubuntu1~18.04.4 [30.7 MB]
+Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.10 [34.7 kB]
+Fetched 52.2 MB in 1s (58.0 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 56638 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+Unpacking bridge-utils (1.5-15ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../3-runc_1.0.0~rc7+git20190403.029124da-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking runc (1.0.0~rc7+git20190403.029124da-0ubuntu1~18.04.2) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../4-containerd_1.2.6-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking containerd (1.2.6-0ubuntu1~18.04.2) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../5-docker.io_18.09.7-0ubuntu1~18.04.4_amd64.deb ...
+Unpacking docker.io (18.09.7-0ubuntu1~18.04.4) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../6-ubuntu-fan_0.12.10_all.deb ...
+Unpacking ubuntu-fan (0.12.10) ...
+Setting up runc (1.0.0~rc7+git20190403.029124da-0ubuntu1~18.04.2) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up containerd (1.2.6-0ubuntu1~18.04.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service ? /lib/systemd/system/containerd.service.
+Setting up bridge-utils (1.5-15ubuntu1) ...
+Setting up ubuntu-fan (0.12.10) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service ? /lib/systemd/system/ubuntu-fan.service.
+Processing triggers for systemd (237-3ubuntu10.24) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up pigz (2.4-1) ...
+Setting up docker.io (18.09.7-0ubuntu1~18.04.4) ...
+Adding group `docker' (GID 115) ...
+Done.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket ? /lib/systemd/system/docker.socket.
+Processing triggers for ureadahead (0.100.0-21) ...
+Processing triggers for systemd (237-3ubuntu10.24) ...
+root@ip-172-31-40-86:/home/ubuntu# docker --version
+Docker version 18.09.7, build 2d0083d
+root@ip-172-31-40-86:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+root@ip-172-31-40-86:/home/ubuntu# docker run ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+5667fdb72017: Pull complete
+d83811f270d5: Pull complete
+ee671aafb583: Pull complete
+7fc152dfb3a6: Pull complete
+Digest: sha256:b88f8848e9a1a4e4558ba7cfc4acc5879e1d0e7ac06401409062ad2627e6fb58
+Status: Downloaded newer image for ubuntu:latest
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+855988a3e400        ubuntu              "/bin/bash"         6 seconds ago       Exited (0) 5 seconds ago                       suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+root@ip-172-31-40-86:/home/ubuntu# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              2ca708c1c9cc        11 hours ago        64.2MB
+root@ip-172-31-40-86:/home/ubuntu# docker commit myapp mynginx
+Error response from daemon: No such container: myapp
+root@ip-172-31-40-86:/home/ubuntu# docker commit suspicious_stallman mynginx
+sha256:5fdbc5cd85ede5405f6c6cc2d21c2bcae1cbd8b7e7a4af2225036c3b80501f33
+root@ip-172-31-40-86:/home/ubuntu# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mynginx             latest              5fdbc5cd85ed        7 seconds ago       64.2MB
+ubuntu              latest              2ca708c1c9cc        11 hours ago        64.2MB
+root@ip-172-31-40-86:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+855988a3e400        ubuntu              "/bin/bash"         16 minutes ago      Exited (0) 16 minutes ago                       suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# docker rm -f $(docker ps -a -q)^C
+root@ip-172-31-40-86:/home/ubuntu# docker rmi $(docker images -q)^C
+root@ip-172-31-40-86:/home/ubuntu# docker exec -t myapp bash ^C
+root@ip-172-31-40-86:/home/ubuntu# history
+    1  apt-get update
+    2  apt-get install docker.io
+    3  docker --version
+    4  docker ps
+    5  docker ps -a
+    6  docker run ubuntu
+    7  docker ps -a
+    8  docker ps
+    9  docker images
+   10  docker commit myapp mynginx
+   11  docker commit suspicious_stallman mynginx
+   12  docker images
+   13  docker ps
+   14  docker ps -a
+   15  history
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                         PORTS               NAMES
+855988a3e400        ubuntu              "/bin/bash"         About an hour ago   Exited (0) About an hour ago                       suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# docker tag ubuntu:7.0 rajib667/mycustom
+Error response from daemon: No such image: ubuntu:7.0
+root@ip-172-31-40-86:/home/ubuntu# docker tag ubuntu rajib667/mycustom
+root@ip-172-31-40-86:/home/ubuntu# docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: rajib667
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+root@ip-172-31-40-86:/home/ubuntu# docker push rajib667\mycustom
+The push refers to repository [docker.io/library/rajib667mycustom]
+An image does not exist locally with the tag: rajib667mycustom
+root@ip-172-31-40-86:/home/ubuntu# docker push rajib667/mycustom
+The push refers to repository [docker.io/rajib667/mycustom]
+e80c789bc6ac: Mounted from library/ubuntu
+6c3332381368: Mounted from library/ubuntu
+ef1a1ec5bba9: Mounted from library/ubuntu
+a1aa3da2a80a: Mounted from library/ubuntu
+latest: digest: sha256:1bbdea4846231d91cce6c7ff3907d26fca444fd6b7e3c282b90c7fe4251f9f86 size: 1152
+root@ip-172-31-40-86:/home/ubuntu# history
+    1  apt-get update
+    2  apt-get install docker.io
+    3  docker --version
+    4  docker ps
+    5  docker ps -a
+    6  docker run ubuntu
+    7  docker ps -a
+    8  docker ps
+    9  docker images
+   10  docker commit myapp mynginx
+   11  docker commit suspicious_stallman mynginx
+   12  docker images
+   13  docker ps
+   14  docker ps -a
+   15  history
+   16  docker ps -a
+   17  docker tag ubuntu:7.0 rajib667/mycustom
+   18  docker tag ubuntu rajib667/mycustom
+   19  docker login
+   20  docker push rajib667\mycustom
+   21  docker push rajib667/mycustom
+   22  history
+root@ip-172-31-40-86:/home/ubuntu# docker run -d -p 8293:80 rajib667/mycustom
+48bbd6b49441519d073699ac8590bb50b748b262aae330463c192d59311f8804
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                         PORTS               NAMES
+48bbd6b49441        rajib667/mycustom   "/bin/bash"         23 seconds ago      Exited (0) 22 seconds ago                          gracious_wright
+855988a3e400        ubuntu              "/bin/bash"         About an hour ago   Exited (0) About an hour ago                       suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# ^C
+root@ip-172-31-40-86:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+root@ip-172-31-40-86:/home/ubuntu# docker run -d -p 8080:80 --name myapp nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+b8f262c62ec6: Pull complete
+a6639d774c21: Pull complete
+22a7aa8442bf: Pull complete
+Digest: sha256:9688d0dae8812dd2437947b756393eb0779487e361aa2ffbc3a529dca61f102c
+Status: Downloaded newer image for nginx:latest
+34ed3f6b5cf561c5a1d6606bf358604f0d29b9fe1715cf5721407064b20fe7df
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS                  NAMES
+34ed3f6b5cf5        nginx               "nginx -g 'daemon of…"   10 seconds ago      Up 8 seconds                0.0.0.0:8080->80/tcp   myapp
+48bbd6b49441        rajib667/mycustom   "/bin/bash"              42 minutes ago      Exited (0) 42 minutes ago                          gracious_wright
+855988a3e400        ubuntu              "/bin/bash"              2 hours ago         Exited (0) 2 hours ago                             suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# docker exec -it 34ed3f6b5cf5
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+root@ip-172-31-40-86:/home/ubuntu# docker exec -it 34ed3f6b5cf5 /bin/bash
+root@34ed3f6b5cf5:/# ll
+bash: ll: command not found
+root@34ed3f6b5cf5:/# ls -a
+.  ..  .dockerenv  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@34ed3f6b5cf5:/# cd /tmp/
+root@34ed3f6b5cf5:/tmp# ls -a
+.  ..
+root@34ed3f6b5cf5:/tmp# cd ..
+root@34ed3f6b5cf5:/# cd var/
+root@34ed3f6b5cf5:/var# ls -a
+.  ..  backups  cache  lib  local  lock  log  mail  opt  run  spool  tmp
+root@34ed3f6b5cf5:/var# cd /etc/
+root@34ed3f6b5cf5:/etc# ll
+bash: ll: command not found
+root@34ed3f6b5cf5:/etc# ls -a
+.             bindresvport.blacklist  environment  gshadow-   issue.net      login.defs   nsswitch.conf  profile    rc5.d        selinux  systemd
+..            cron.daily              fonts        host.conf  kernel         logrotate.d  opt            profile.d  rc6.d        shadow   terminfo
+.pwd.lock     debconf.conf            fstab        hostname   ld.so.cache    machine-id   os-release     rc0.d      rcS.d        shadow-  timezone
+adduser.conf  debian_version          gai.conf     hosts      ld.so.conf     mke2fs.conf  pam.conf       rc1.d      resolv.conf  shells   ucf.conf
+alternatives  default                 group        init.d     ld.so.conf.d   motd         pam.d          rc2.d      rmt          skel     update-motd.d
+apt           deluser.conf            group-       inputrc    libaudit.conf  mtab         passwd         rc3.d      securetty    subgid   xattr.conf
+bash.bashrc   dpkg                    gshadow      issue      localtime      nginx        passwd-        rc4.d      security     subuid
+root@34ed3f6b5cf5:/etc# cd /usr/
+root@34ed3f6b5cf5:/usr# ll
+bash: ll: command not found
+root@34ed3f6b5cf5:/usr# ls -a
+.  ..  bin  games  include  lib  local  sbin  share  src
+root@34ed3f6b5cf5:/usr# cd share/
+root@34ed3f6b5cf5:/usr/share# ls -a
+.    adduser      bash-completion  debconf      doc       fontconfig  gdb   keyrings  locale  misc   pam-configs  polkit-1        tabset    zoneinfo
+..   base-files   bug              debianutils  doc-base  fonts       info  libc-bin  man     nginx  perl5        readline        terminfo
+X11  base-passwd  common-licenses  dict         dpkg      gcc-8       java  lintian   menu    pam    pixmaps      sensible-utils  xml
+root@34ed3f6b5cf5:/usr/share# cd nginx/
+root@34ed3f6b5cf5:/usr/share/nginx# ll
+bash: ll: command not found
+root@34ed3f6b5cf5:/usr/share/nginx# ls
+html
+root@34ed3f6b5cf5:/usr/share/nginx# vi html/
+bash: vi: command not found
+root@34ed3f6b5cf5:/usr/share/nginx# cd html/
+root@34ed3f6b5cf5:/usr/share/nginx/html# ls
+50x.html  index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# vi index.html
+bash: vi: command not found
+root@34ed3f6b5cf5:/usr/share/nginx/html# apt-get install vim
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package vim
+root@34ed3f6b5cf5:/usr/share/nginx/html# apt-install vim
+bash: apt-install: command not found
+root@34ed3f6b5cf5:/usr/share/nginx/html# apt-get update
+Get:1 http://security-cdn.debian.org/debian-security buster/updates InRelease [39.1 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian buster InRelease [122 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian buster-updates InRelease [49.3 kB]
+Get:4 http://security-cdn.debian.org/debian-security buster/updates/main amd64 Packages [86.3 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian buster/main amd64 Packages [7899 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian buster-updates/main amd64 Packages [3352 B]
+Fetched 8198 kB in 2s (3382 kB/s)
+Reading package lists... Done
+root@34ed3f6b5cf5:/usr/share/nginx/html# apt-get install vim
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libgpm2 vim-common vim-runtime xxd
+Suggested packages:
+  gpm ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libgpm2 vim vim-common vim-runtime xxd
+0 upgraded, 5 newly installed, 0 to remove and 1 not upgraded.
+Need to get 7425 kB of archives.
+After this operation, 33.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://cdn-fastly.deb.debian.org/debian buster/main amd64 xxd amd64 2:8.1.0875-5 [140 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian buster/main amd64 vim-common all 2:8.1.0875-5 [195 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libgpm2 amd64 1.20.7-5 [35.1 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian buster/main amd64 vim-runtime all 2:8.1.0875-5 [5775 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian buster/main amd64 vim amd64 2:8.1.0875-5 [1280 kB]
+Fetched 7425 kB in 1s (9883 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package xxd.
+(Reading database ... 7203 files and directories currently installed.)
+Preparing to unpack .../xxd_2%3a8.1.0875-5_amd64.deb ...
+Unpacking xxd (2:8.1.0875-5) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../vim-common_2%3a8.1.0875-5_all.deb ...
+Unpacking vim-common (2:8.1.0875-5) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.7-5_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-5) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a8.1.0875-5_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.0875-5) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a8.1.0875-5_amd64.deb ...
+Unpacking vim (2:8.1.0875-5) ...
+Setting up libgpm2:amd64 (1.20.7-5) ...
+Setting up xxd (2:8.1.0875-5) ...
+Setting up vim-common (2:8.1.0875-5) ...
+Setting up vim-runtime (2:8.1.0875-5) ...
+Setting up vim (2:8.1.0875-5) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+Processing triggers for libc-bin (2.28-10) ...
+root@34ed3f6b5cf5:/usr/share/nginx/html# vi index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to smanta's nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+root@34ed3f6b5cf5:/usr/share/nginx/html# exit
+exit
+root@ip-172-31-40-86:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                         PORTS                  NAMES
+34ed3f6b5cf5        nginx               "nginx -g 'daemon of…"   9 minutes ago       Up 9 minutes                   0.0.0.0:8080->80/tcp   myapp
+48bbd6b49441        rajib667/mycustom   "/bin/bash"              About an hour ago   Exited (0) About an hour ago                          gracious_wright
+855988a3e400        ubuntu              "/bin/bash"              2 hours ago         Exited (0) 2 hours ago                                suspicious_stallman
+root@ip-172-31-40-86:/home/ubuntu# docker exec -it 34ed3f6b5cf5
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+root@ip-172-31-40-86:/home/ubuntu# docker exec -it 34ed3f6b5cf5 /bin/bash
+root@34ed3f6b5cf5:/# cd /usr/
+bin/     games/   include/ lib/     local/   sbin/    share/   src/
+root@34ed3f6b5cf5:/# cd /usr/share/nginx/html/
+root@34ed3f6b5cf5:/usr/share/nginx/html# ls -a
+.  ..  50x.html  index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# rm index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# ls -a
+.  ..  50x.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# vi index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# ls -a
+.  ..  50x.html  index.html
+root@34ed3f6b5cf5:/usr/share/nginx/html# cat 50x.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>An error occurred.</h1>
+<p>Sorry, the page you are looking for is currently unavailable.<br/>
+Please try again later.</p>
+<p>If you are the system administrator of this resource then you should check
+the error log for details.</p>
+<p><em>Faithfully yours, nginx.</em></p>
+</body>
+</html>
+root@34ed3f6b5cf5:/usr/share/nginx/html#
