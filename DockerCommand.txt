@@ -26,4 +26,6 @@ docker run -d -p 9008:1111 discovery1
 here 1111 is port no that is same as tomcat port mentioned in application.properties and it has no connection 
 with expose port in dockerfile
 
+browser url to hit - aws-ip:9008 (i.e http://18.224.1.251:9008/)- will open discovery page
+
 ---------------------------------------------------------------------------------------------
