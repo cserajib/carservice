@@ -29,3 +29,23 @@ with expose port in dockerfile
 browser url to hit - aws-ip:9008 (i.e http://18.224.1.251:9008/)- will open discovery page
 
 ---------------------------------------------------------------------------------------------
+
+To install Jenkins
+
+sudo su
+
+apt-get update
+apt-get install openjdk-8-jdk
+
+java -version
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | apt-key add
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+
+apt-get update
+apt-get install jenkins
+-----------------------------------------------------------------------------------------------------------
+install plugin steps: manage jenkins -> Plugin Manager-> available tab-> sear for "Build Pipeline" Plugin
+
+
+-------------------------------------------------------------------------------------------------------------
+Maven set up steps : manage jenkins -> global Tool Configuration -> Maven 
